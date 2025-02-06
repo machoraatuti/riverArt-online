@@ -1,13 +1,19 @@
 // Cart.js
 import { useSelector, useDispatch } from 'react-redux';  // Assuming you're using Redux for state management
-import { removeFromCart } from '../features/cart/cartSlice';
+import { removeFromCart } from '../features/cart/cartSlice'; // Action to remove an item from the cart
+import { useNavigate } from 'react-router-dom';  // Import useNavigate for navigation
 
 const Cart = () => {
   const cartItems = useSelector((state) => state.cart.items); // Get items in the cart from Redux state
   const dispatch = useDispatch();
+  const navigate = useNavigate();  // Initialize the useNavigate hook
 
   const handleRemoveFromCart = (id) => {
     dispatch(removeFromCart(id)); // Dispatch the action to remove an item from the cart
+  };
+
+  const handleReturnToHome = () => {
+    navigate('/');  // Navigate to the home page
   };
 
   const calculateTotal = () => {
@@ -18,7 +24,15 @@ const Cart = () => {
     <div className="p-6 max-w-7xl mx-auto">
       <h1 className="text-2xl font-bold mb-4">Shopping Cart</h1>
       {cartItems.length === 0 ? (
-        <p>Your cart is empty.</p>
+        <div>
+          <p>Your cart is empty.</p>
+          <button
+            onClick={handleReturnToHome}
+            className="mt-4 bg-blue-500 text-black px-6 py-2 rounded-md hover:bg-blue-600"
+          >
+            Return to Home
+          </button>
+        </div>
       ) : (
         <div>
           <ul>
@@ -49,7 +63,7 @@ const Cart = () => {
           </ul>
           <div className="mt-4">
             <p className="text-lg font-semibold">Total: ${calculateTotal()}</p>
-            <button className="mt-4 bg-blue-500 text-black px-6 py-2 rounded-md hover:bg-blue-600">
+            <button className="mt-4 bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600">
               Proceed to Checkout
             </button>
           </div>
