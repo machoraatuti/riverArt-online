@@ -5,6 +5,8 @@ import ArtDetails from './pages/ArtDetails';
 import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
 import AdminDashboard from './pages/AdminDashboard';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 
 function App() {
   return (
