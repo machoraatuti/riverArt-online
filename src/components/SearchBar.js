@@ -27,7 +27,7 @@ const SearchBar = ({ onSearch }) => {
       {/* Search Button */}
       <button 
   onClick={handleSearch} 
-  className="bg-blue-500 text-blue rounded-full p-3 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-all flex items-center justify-center"
+  className="bg-brown-500 text-blue rounded-full p-3 hover:bg-black-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-all flex items-center justify-center"
 >
   Search
 </button>
