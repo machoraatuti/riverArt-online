@@ -8,7 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "release": "vite build && cd dist && surge"
+    "release": "vite build && cd dist && cp index.html 200.html  && surge"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.6.1",
