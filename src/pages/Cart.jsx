@@ -56,8 +56,8 @@ const Cart = () => {
           <div className="bg-white dark:bg-gray-800 shadow-md rounded-lg p-6 w-full max-w-3xl">
             <ul className="divide-y divide-gray-300 dark:divide-gray-700">
               {cartItems.map((item) => (
-                <li key={item.id} className="flex items-center justify-between py-4">
-                  <div className="flex items-center">
+                <li key={item.id} className="flex flex-col sm:flex-row items-center justify-between py-4">
+                  <div className="flex items-center w-full sm:w-auto">
                     <img
                       src={item.image}
                       alt={item.title}
@@ -68,8 +68,8 @@ const Cart = () => {
                       <p className="text-gray-600 dark:text-gray-400">{item.artist}</p>
                     </div>
                   </div>
-                  <div className="flex items-center">
-                    <p className="text-xl font-bold text-gray-900 dark:text-white">${item.price}</p>
+                  <div className="flex items-center justify-between w-full sm:w-auto mt-4 sm:mt-0">
+                    <p className="text-xl font-bold text-gray-900 dark:text-white whitespace-nowrap">${item.price}</p>
                     <button
                       onClick={() => handleRemoveFromCart(item.id)}
                       className="ml-6 text-red-500 hover:text-red-700 dark:hover:text-red-400 transition"

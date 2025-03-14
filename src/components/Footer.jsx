@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 
+
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white w-full p-6 text-center relative mt-auto">
@@ -17,10 +18,10 @@ const Footer = () => {
         {/* Social Media Icons */}
         <div className="flex justify-center space-x-6 mt-4">
           <a href="https://www.facebook.com/profile.php?id=61572892560565" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-facebook fa-2x text-gray-400 hover:text-blue-600 transition"></i>
+            <i className="fab fa-facebook fa-2x text-white hover:text-blue-600 transition"></i>
           </a>
           <a href="https://x.com/riverartonline?s=21&t=XY0XCGt3-v_ynOckR2dksQ" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-twitter fa-2x text-gray-400 hover:text-blue-400 transition"></i>
+            <i className="fab fa-twitter fa-2x text-white hover:text-blue-400 transition"></i>
           </a>
         </div>
       </div>
