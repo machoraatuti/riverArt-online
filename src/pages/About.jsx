@@ -57,7 +57,7 @@ const About = () => {
         </p>
         <button 
           onClick={() => navigate('/gallery')} 
-          className="mt-6 px-8 py-4 bg-white text-indigo-700 hover:bg-gray-100 dark:bg-gray-100 dark:text-indigo-800 dark:hover:bg-gray-200 rounded-md text-lg shadow-md transition transform hover:scale-105"
+          className="mt-6 px-8 py-4 bg-white text-black dark:text-white text-indigo-700 hover:bg-gray-100 dark:bg-gray-100 dark:text-indigo-800 dark:hover:bg-gray-200 rounded-md text-lg shadow-md transition transform hover:scale-105"
         >
           Explore Gallery
         </button>

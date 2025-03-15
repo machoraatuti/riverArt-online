@@ -47,7 +47,7 @@ const Cart = () => {
             <p className="text-lg text-gray-600 dark:text-gray-300">Your cart is empty.</p>
             <button
               onClick={handleReturnToHome}
-              className="mt-6 px-6 py-3 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition transform hover:scale-105"
+              className="mt-6 px-6 py-3 bg-indigo-600 text-black dark:text-white rounded-md hover:bg-indigo-700 transition transform hover:scale-105"
             >
               Return to Home
             </button>
@@ -86,7 +86,7 @@ const Cart = () => {
               <p className="text-2xl font-semibold text-gray-900 dark:text-white">Total: ${calculateTotal()}</p>
               <button
                 onClick={handleCheckout}
-                className="mt-6 px-8 py-3 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition transform hover:scale-105 shadow-lg"
+                className="mt-6 px-8 py-3 bg-indigo-600 text-black dark:text-white rounded-md hover:bg-indigo-700 transition transform hover:scale-105 shadow-lg"
               >
                 Proceed to Checkout
               </button>

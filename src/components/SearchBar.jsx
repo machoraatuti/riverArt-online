@@ -27,7 +27,7 @@ const SearchBar = ({ onSearch }) => {
       {/* Search Button */}
       <button 
         onClick={handleSearch} 
-        className="bg-indigo-600 text-white rounded-full p-3 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50 transition-all flex items-center justify-center"
+        className="bg-indigo-600 text-black dark:text-white rounded-full p-3 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50 transition-all flex items-center justify-center"
       >
         Search
       </button>
@@ -36,7 +36,7 @@ const SearchBar = ({ onSearch }) => {
       {query && (
         <button 
           onClick={handleClear} 
-          className="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 transition-all"
+          className="text-black dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 transition-all"
         >
           X
         </button>

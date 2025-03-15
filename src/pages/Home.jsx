@@ -23,7 +23,7 @@ const Home = () => {
           </p>
           <button 
             onClick={() => navigate('/gallery')}
-            className="mt-6 px-8 py-4 bg-indigo-600 text-white hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600 rounded-md text-xl shadow-xl transition transform hover:scale-105"
+            className="mt-6 px-8 py-4 bg-indigo-600 text-black dark:text-white hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600 rounded-md text-xl shadow-xl transition transform hover:scale-105"
           >
             Explore Gallery
           </button>
@@ -60,7 +60,7 @@ const Home = () => {
         </p>
         <button 
           onClick={() => navigate('/about')}
-          className="mt-6 px-8 py-4 bg-white text-indigo-700 hover:bg-gray-100 dark:bg-gray-100 dark:text-indigo-800 dark:hover:bg-gray-200 rounded-md text-xl shadow-lg transition transform hover:scale-105"
+          className="mt-6 px-8 py-4 bg-white text-black dark:text-white text-indigo-700 hover:bg-gray-100 dark:bg-gray-100 dark:text-indigo-800 dark:hover:bg-gray-200 rounded-md text-xl shadow-lg transition transform hover:scale-105"
         >
           Learn More
         </button>
