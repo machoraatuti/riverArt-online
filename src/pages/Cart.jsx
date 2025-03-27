@@ -1,10 +1,10 @@
-//Cart.jsx
-import { useSelector, useDispatch } from 'react-redux';
-import { removeFromCart } from '../features/cart/cartSlice';
+import { FaShoppingCart } from 'react-icons/fa'; // Import the cart icon
+import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import SubHeader from '../components/SubHeader';
+import Footer from '../components/Footer';
+import { removeFromCart } from '../features/cart/cartSlice';
 
 const Cart = () => {
   const cartItems = useSelector((state) => state.cart.items);
@@ -38,12 +38,8 @@ const Cart = () => {
         
         {cartItems.length === 0 ? (
           <div className="flex flex-col items-center justify-center text-center mb-20 min-h-[50vh]">
-            {/* Empty Cart Image */}
-            <img
-              src={'/assets/images/cartimage.png'} 
-              alt="Empty Cart"
-              className="w-28 h-28 mb-6 object-contain"
-            />
+            {/* Empty Cart Icon */}
+            <FaShoppingCart className="text-6xl text-gray-400 dark:text-gray-500 mb-6" />
             <p className="text-lg text-gray-600 dark:text-gray-300">Your cart is empty.</p>
             <button
               onClick={handleReturnToHome}

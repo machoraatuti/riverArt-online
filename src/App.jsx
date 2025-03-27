@@ -10,6 +10,8 @@ import Contact from './pages/Contact';
 import ArtListings from './features/art/ArtListings';
 import ArtDetails from './pages/ArtDetails';
 import Cart from './pages/Cart';
+import LegalInfoPage from './pages/LegalInfoPage'; // adjust the path if needed
+
 
 
 function App() {
@@ -23,6 +25,7 @@ function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/legal" element={<LegalInfoPage />} />
       </Routes>
     </Router>
   );

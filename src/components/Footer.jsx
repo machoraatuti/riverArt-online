@@ -13,6 +13,8 @@ const Footer = () => {
           <Link to="/gallery" className="text-gray-400 hover:text-indigo-400 transition">Gallery</Link>
           <Link to="/about" className="text-gray-400 hover:text-indigo-400 transition">About</Link>
           <Link to="/contact" className="text-gray-400 hover:text-indigo-400 transition">Contact</Link>
+          <Link to="/legal" className="hover:text-indigo-400">Legal</Link>
+
         </div>
 
         {/* Social Media Icons */}

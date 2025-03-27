@@ -1,12 +1,19 @@
-//Navbar.js
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useState } from 'react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation(); // Get the current location
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+
+  // Function to check if the link is active
+  const getLinkClass = (path) => {
+    return location.pathname === path
+      ? 'text-indigo-400 border-b-2 border-indigo-400'
+      : 'text-white border-b-2 border-transparent hover:border-indigo-400 hover:text-indigo-400 transition duration-300';
   };
 
   return (
@@ -22,33 +29,40 @@ const Navbar = () => {
         <div className="hidden md:flex space-x-6">
           <Link 
             to="/" 
-            className="text-white px-4 py-2 border-b-2 border-transparent hover:border-indigo-400 hover:text-indigo-400 transition duration-300"
+            className={`px-4 py-2 ${getLinkClass('/')}`}
           >
             Home
           </Link>
           <Link 
             to="/gallery" 
-            className="text-white px-4 py-2 border-b-2 border-transparent hover:border-indigo-400 hover:text-indigo-400 transition duration-300"
+            className={`px-4 py-2 ${getLinkClass('/gallery')}`}
           >
             Gallery
           </Link>
           <Link 
             to="/about" 
-            className="text-white px-4 py-2 border-b-2 border-transparent hover:border-indigo-400 hover:text-indigo-400 transition duration-300"
+            className={`px-4 py-2 ${getLinkClass('/about')}`}
           >
             About
           </Link>
           <Link 
             to="/contact" 
-            className="text-white px-4 py-2 border-b-2 border-transparent hover:border-indigo-400 hover:text-indigo-400 transition duration-300"
+            className={`px-4 py-2 ${getLinkClass('/contact')}`}
           >
             Contact
           </Link>
+            <Link 
+              to="/cart" 
+              className={`px-4 py-2 ${location.pathname === '/cart' ? 'text-indigo-400 border-b-2 border-indigo-400' : 'text-white border-b-2 border-transparent hover:border-indigo-400 hover:text-indigo-400 transition duration-300'}`}
+            >
+              Cart
+            </Link>
+
           <Link 
-            to="/cart" 
-            className="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition duration-300"
+            to="/legal" 
+            className={`px-4 py-2 ${getLinkClass('/legal')}`}
           >
-            Cart
+            Legal
           </Link>
         </div>
 
@@ -67,6 +81,8 @@ const Navbar = () => {
           <Link to="/gallery" className="block py-2 hover:text-indigo-400" onClick={toggleMenu}>Gallery</Link>
           <Link to="/about" className="block py-2 hover:text-indigo-400" onClick={toggleMenu}>About</Link>
           <Link to="/contact" className="block py-2 hover:text-indigo-400" onClick={toggleMenu}>Contact</Link>
+          <Link to="/legal" className="block py-2 hover:text-indigo-400" onClick={toggleMenu}>Legal</Link>
+          <hr />
           <Link to="/cart" className="block bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition duration-300" onClick={toggleMenu}>Cart</Link>
         </div>
       )}
