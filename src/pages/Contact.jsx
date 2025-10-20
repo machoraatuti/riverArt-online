@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 import SubHeader from '../components/SubHeader';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [formData, setFormData] = useState({ name: '', email: '',phone: '', message: '', textConsent: '' });
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -63,6 +63,17 @@ const Contact = () => {
               className="w-full p-3 border rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring focus:ring-indigo-300"
             />
           </div>
+          <div className="mb-4">
+            <label className="block text-gray-900 dark:text-white font-semibold">Phone Number</label>
+            <input
+                type="tel"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                required
+                className="w-full p-3 border rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring focus:ring-indigo-300"
+            />
+          </div>
 
           <div className="mb-4">
             <label className="block text-gray-900 dark:text-white font-semibold">Message</label>
@@ -74,6 +85,30 @@ const Contact = () => {
               required 
               className="w-full p-3 border rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring focus:ring-indigo-300"
             ></textarea>
+          </div>
+          <div className="mb-6 text-left">
+            <label className="flex items-center text-gray-900 dark:text-white font-semibold cursor-pointer">
+              <input
+                  type="radio"
+                  name="textConsent"
+                  value="yes"
+                  checked={formData.textConsent === 'yes'}
+                  onChange={handleChange}
+                  className="w-4 h-4 accent-indigo-600 cursor-pointer"
+              />
+              <span className="ml-3">I agree to receive text messages</span>
+            </label>
+            <label className="flex items-center text-gray-900 dark:text-white font-semibold cursor-pointer mt-2">
+              <input
+                  type="radio"
+                  name="textConsent"
+                  value="no"
+                  checked={formData.textConsent === 'no'}
+                  onChange={handleChange}
+                  className="w-4 h-4 accent-indigo-600 cursor-pointer"
+              />
+              <span className="ml-3">I do not want to receive text messages</span>
+            </label>
           </div>
 
           <button 
